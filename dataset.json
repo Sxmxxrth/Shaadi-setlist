@@ -1,0 +1,844 @@
+[
+  {
+    "song": "Gallan Goodiyaan",
+    "event": "sangeet, reception",
+    "mood": "high energy, fun",
+    "genre": "Bollywood, Punjabi",
+    "energy": 9
+  },
+  {
+    "song": "Nachde Ne Saare",
+    "event": "sangeet, wedding",
+    "mood": "high energy, fun",
+    "genre": "Bollywood, Punjabi",
+    "energy": 9
+  },
+  {
+    "song": "Dilli Wali Girlfriend",
+    "event": "sangeet, cocktail",
+    "mood": "fun, high energy",
+    "genre": "Bollywood",
+    "energy": 8
+  },
+  {
+    "song": "Kar Gayi Chull",
+    "event": "sangeet, cocktail, reception",
+    "mood": "high energy, hype",
+    "genre": "Bollywood, Punjabi",
+    "energy": 9
+  },
+  {
+    "song": "Badtameez Dil",
+    "event": "sangeet, cocktail",
+    "mood": "high energy, fun",
+    "genre": "Bollywood",
+    "energy": 8
+  },
+  {
+    "song": "Balam Pichkari",
+    "event": "sangeet, haldi",
+    "mood": "fun, high energy",
+    "genre": "Bollywood",
+    "energy": 8
+  },
+  {
+    "song": "Dham Dham",
+    "event": "sangeet, reception",
+    "mood": "high energy, hype",
+    "genre": "Bollywood",
+    "energy": 9
+  },
+  {
+    "song": "Tune Maari Entriyaan",
+    "event": "baraat, wedding",
+    "mood": "high energy, hype",
+    "genre": "Bollywood",
+    "energy": 9
+  },
+  {
+    "song": "Ainvayi Ainvayi",
+    "event": "sangeet, mehendi",
+    "mood": "fun, romantic",
+    "genre": "Bollywood, Punjabi",
+    "energy": 7
+  },
+  {
+    "song": "Nagada Sang Dhol",
+    "event": "sangeet, wedding, baraat",
+    "mood": "high energy, hype",
+    "genre": "Bollywood, Gujarati",
+    "energy": 10
+  },
+  {
+    "song": "London Thumakda",
+    "event": "sangeet, reception, cocktail",
+    "mood": "fun, high energy",
+    "genre": "Bollywood, Punjabi",
+    "energy": 9
+  },
+  {
+    "song": "Gur Naal Ishq Mitha",
+    "event": "sangeet, mehendi",
+    "mood": "fun, high energy",
+    "genre": "Punjabi, Folk",
+    "energy": 8
+  },
+  {
+    "song": "Jhoom Barabar Jhoom",
+    "event": "baraat, sangeet",
+    "mood": "high energy, fun",
+    "genre": "Bollywood, Punjabi",
+    "energy": 9
+  },
+  {
+    "song": "Dildara",
+    "event": "baraat, wedding",
+    "mood": "high energy, romantic",
+    "genre": "Bollywood",
+    "energy": 8
+  },
+  {
+    "song": "Morni Banke",
+    "event": "sangeet, mehendi",
+    "mood": "fun, high energy",
+    "genre": "Bollywood, Punjabi",
+    "energy": 8
+  },
+  {
+    "song": "Tere Naal Nachna",
+    "event": "sangeet, reception",
+    "mood": "high energy, fun",
+    "genre": "Punjabi",
+    "energy": 9
+  },
+  {
+    "song": "Hauli Hauli",
+    "event": "sangeet, cocktail",
+    "mood": "fun, romantic",
+    "genre": "Bollywood, Punjabi",
+    "energy": 7
+  },
+  {
+    "song": "Kala Chashma",
+    "event": "sangeet, cocktail, reception",
+    "mood": "high energy, hype",
+    "genre": "Bollywood, Punjabi",
+    "energy": 10
+  },
+  {
+    "song": "Chunari Chunari",
+    "event": "sangeet, mehendi",
+    "mood": "fun, high energy",
+    "genre": "Bollywood, 90s",
+    "energy": 8
+  },
+  {
+    "song": "Aaj Ki Raat",
+    "event": "reception, sangeet",
+    "mood": "high energy, classy",
+    "genre": "Bollywood",
+    "energy": 9
+  },
+
+  {
+    "song": "Tum Hi Ho",
+    "event": "wedding, reception, bidaai",
+    "mood": "romantic, emotional",
+    "genre": "Bollywood",
+    "energy": 4
+  },
+  {
+    "song": "Tera Hone Laga Hoon",
+    "event": "wedding, reception",
+    "mood": "romantic",
+    "genre": "Bollywood",
+    "energy": 5
+  },
+  {
+    "song": "Sajdaa",
+    "event": "wedding, reception",
+    "mood": "romantic, emotional",
+    "genre": "Bollywood",
+    "energy": 4
+  },
+  {
+    "song": "Pehla Nasha",
+    "event": "wedding, reception, mehendi",
+    "mood": "romantic",
+    "genre": "Bollywood, 90s",
+    "energy": 4
+  },
+  {
+    "song": "Tujh Mein Rab Dikhta Hai",
+    "event": "wedding, bidaai",
+    "mood": "romantic, emotional",
+    "genre": "Bollywood",
+    "energy": 3
+  },
+  {
+    "song": "Mere Haath Mein",
+    "event": "wedding, mehendi",
+    "mood": "romantic, fun",
+    "genre": "Bollywood",
+    "energy": 5
+  },
+  {
+    "song": "Tere Liye",
+    "event": "wedding, reception",
+    "mood": "romantic",
+    "genre": "Bollywood",
+    "energy": 4
+  },
+  {
+    "song": "Rabba Mere Rabba",
+    "event": "wedding",
+    "mood": "romantic, emotional",
+    "genre": "Bollywood",
+    "energy": 4
+  },
+  {
+    "song": "Main Tenu Samjhawan Ki",
+    "event": "wedding, bidaai",
+    "mood": "romantic, emotional",
+    "genre": "Bollywood, Punjabi",
+    "energy": 4
+  },
+  {
+    "song": "Saware",
+    "event": "wedding, bidaai",
+    "mood": "emotional, romantic",
+    "genre": "Bollywood",
+    "energy": 3
+  },
+  {
+    "song": "Teri Meri Prem Kahani",
+    "event": "wedding, reception",
+    "mood": "romantic",
+    "genre": "Bollywood",
+    "energy": 5
+  },
+  {
+    "song": "Kuch Kuch Hota Hai",
+    "event": "wedding, reception, sangeet",
+    "mood": "romantic, emotional",
+    "genre": "Bollywood, 90s",
+    "energy": 5
+  },
+  {
+    "song": "Aankhon Mein Teri",
+    "event": "wedding, reception",
+    "mood": "romantic, classy",
+    "genre": "Bollywood",
+    "energy": 4
+  },
+  {
+    "song": "Ik Vaari Aa",
+    "event": "wedding, bidaai",
+    "mood": "emotional, romantic",
+    "genre": "Bollywood",
+    "energy": 3
+  },
+  {
+    "song": "Tere Sang Yaara",
+    "event": "wedding, reception",
+    "mood": "romantic",
+    "genre": "Bollywood",
+    "energy": 5
+  },
+
+  {
+    "song": "Babul",
+    "event": "bidaai",
+    "mood": "emotional",
+    "genre": "Bollywood, Folk",
+    "energy": 2
+  },
+  {
+    "song": "Vidaai Song – Aaj Meri Vidaai Hai",
+    "event": "bidaai",
+    "mood": "emotional",
+    "genre": "Bollywood",
+    "energy": 2
+  },
+  {
+    "song": "Piya Ghar Aaya",
+    "event": "bidaai, wedding",
+    "mood": "emotional, romantic",
+    "genre": "Bollywood, Sufi",
+    "energy": 3
+  },
+  {
+    "song": "Dil To Pagal Hai",
+    "event": "bidaai, wedding",
+    "mood": "emotional, romantic",
+    "genre": "Bollywood, 90s",
+    "energy": 4
+  },
+  {
+    "song": "Mere Dad Ki Maruti – Aaj Mera Jee Karda",
+    "event": "bidaai",
+    "mood": "emotional, fun",
+    "genre": "Punjabi",
+    "energy": 4
+  },
+  {
+    "song": "Woh Lamhe",
+    "event": "bidaai, reception",
+    "mood": "emotional",
+    "genre": "Bollywood",
+    "energy": 3
+  },
+
+  {
+    "song": "Aaj Ki Party",
+    "event": "cocktail, reception, sangeet",
+    "mood": "high energy, fun",
+    "genre": "Bollywood",
+    "energy": 9
+  },
+  {
+    "song": "Illegal Weapon",
+    "event": "cocktail, sangeet",
+    "mood": "high energy, hype",
+    "genre": "Punjabi",
+    "energy": 9
+  },
+  {
+    "song": "Proper Patola",
+    "event": "cocktail, sangeet",
+    "mood": "high energy, hype",
+    "genre": "Punjabi, Bollywood",
+    "energy": 9
+  },
+  {
+    "song": "Breakup Song",
+    "event": "cocktail, sangeet, reception",
+    "mood": "high energy, fun",
+    "genre": "Bollywood",
+    "energy": 9
+  },
+  {
+    "song": "Buzz",
+    "event": "cocktail, sangeet",
+    "mood": "high energy, hype",
+    "genre": "Punjabi",
+    "energy": 8
+  },
+  {
+    "song": "Lamberghini",
+    "event": "cocktail, sangeet",
+    "mood": "high energy, classy",
+    "genre": "Punjabi",
+    "energy": 8
+  },
+  {
+    "song": "She Move It Like",
+    "event": "cocktail, sangeet",
+    "mood": "high energy, hype",
+    "genre": "Punjabi, EDM",
+    "energy": 9
+  },
+  {
+    "song": "Akh Lad Jaave",
+    "event": "cocktail, sangeet, reception",
+    "mood": "fun, romantic",
+    "genre": "Bollywood, Punjabi",
+    "energy": 7
+  },
+  {
+    "song": "Slowly Slowly",
+    "event": "cocktail, mehendi",
+    "mood": "fun, romantic",
+    "genre": "Bollywood, Punjabi",
+    "energy": 6
+  },
+  {
+    "song": "Swag Se Swagat",
+    "event": "cocktail, reception, baraat",
+    "mood": "high energy, classy",
+    "genre": "Bollywood",
+    "energy": 9
+  },
+
+  {
+    "song": "Mehendi Hai Rachne Wali",
+    "event": "mehendi",
+    "mood": "fun, traditional",
+    "genre": "Bollywood, Folk",
+    "energy": 6
+  },
+  {
+    "song": "Aaj Mere Yaar Ki Shaadi Hai",
+    "event": "mehendi, sangeet",
+    "mood": "fun, high energy",
+    "genre": "Bollywood, 90s",
+    "energy": 8
+  },
+  {
+    "song": "Sauda Khara Khara",
+    "event": "mehendi, sangeet",
+    "mood": "fun, high energy",
+    "genre": "Punjabi",
+    "energy": 8
+  },
+  {
+    "song": "Dama Dam Mast Qalandar",
+    "event": "mehendi, haldi, sangeet",
+    "mood": "fun, spiritual",
+    "genre": "Sufi, Folk",
+    "energy": 7
+  },
+  {
+    "song": "Laung Laachi",
+    "event": "mehendi, sangeet",
+    "mood": "fun, romantic",
+    "genre": "Punjabi",
+    "energy": 7
+  },
+  {
+    "song": "Nikle Currant",
+    "event": "mehendi, sangeet",
+    "mood": "fun, high energy",
+    "genre": "Punjabi",
+    "energy": 8
+  },
+
+  {
+    "song": "Haldi",
+    "event": "haldi",
+    "mood": "fun, traditional",
+    "genre": "Bollywood",
+    "energy": 6
+  },
+  {
+    "song": "Aaj Ibaadat",
+    "event": "haldi, mehendi",
+    "mood": "emotional, classy",
+    "genre": "Bollywood",
+    "energy": 4
+  },
+  {
+    "song": "Roke Na Ruke Naina",
+    "event": "haldi, bidaai",
+    "mood": "emotional",
+    "genre": "Bollywood",
+    "energy": 3
+  },
+  {
+    "song": "Mehrama",
+    "event": "haldi, wedding",
+    "mood": "emotional, romantic",
+    "genre": "Bollywood, Indie",
+    "energy": 4
+  },
+  {
+    "song": "Phulkari",
+    "event": "haldi, mehendi",
+    "mood": "fun, traditional",
+    "genre": "Punjabi, Folk",
+    "energy": 7
+  },
+  {
+    "song": "Genda Phool",
+    "event": "haldi, mehendi",
+    "mood": "fun, traditional",
+    "genre": "Bollywood, Folk",
+    "energy": 7
+  },
+
+  {
+    "song": "Desi Girl",
+    "event": "baraat, sangeet, reception",
+    "mood": "high energy, hype",
+    "genre": "Bollywood",
+    "energy": 9
+  },
+  {
+    "song": "Seeti Maar",
+    "event": "baraat, sangeet",
+    "mood": "high energy, hype",
+    "genre": "Bollywood, Telugu",
+    "energy": 9
+  },
+  {
+    "song": "Jai Ho",
+    "event": "baraat, wedding",
+    "mood": "high energy, hype",
+    "genre": "Bollywood",
+    "energy": 9
+  },
+  {
+    "song": "Sadi Gali",
+    "event": "baraat, sangeet",
+    "mood": "high energy, fun",
+    "genre": "Punjabi",
+    "energy": 9
+  },
+  {
+    "song": "Aa Re Pritam Pyare",
+    "event": "baraat, wedding",
+    "mood": "high energy, fun",
+    "genre": "Bollywood",
+    "energy": 8
+  },
+  {
+    "song": "Chaiyya Chaiyya",
+    "event": "baraat, reception",
+    "mood": "high energy, classy",
+    "genre": "Bollywood",
+    "energy": 8
+  },
+
+  {
+    "song": "Yeh Ishq Haaye",
+    "event": "reception, wedding",
+    "mood": "romantic, classy",
+    "genre": "Bollywood",
+    "energy": 5
+  },
+  {
+    "song": "Dilbar Dilbar",
+    "event": "reception, cocktail, sangeet",
+    "mood": "high energy, hype",
+    "genre": "Bollywood",
+    "energy": 9
+  },
+  {
+    "song": "Sona Sona",
+    "event": "reception, wedding",
+    "mood": "fun, romantic",
+    "genre": "Bollywood, 90s",
+    "energy": 6
+  },
+  {
+    "song": "Abhi Toh Party Shuru Hui Hai",
+    "event": "reception, cocktail",
+    "mood": "high energy, fun",
+    "genre": "Bollywood",
+    "energy": 9
+  },
+  {
+    "song": "Raat Ka Nasha",
+    "event": "reception, cocktail",
+    "mood": "classy, romantic",
+    "genre": "Bollywood",
+    "energy": 5
+  },
+  {
+    "song": "Chaar Baj Gaye",
+    "event": "reception, cocktail",
+    "mood": "high energy, hype",
+    "genre": "Bollywood, Electronic",
+    "energy": 9
+  },
+
+  {
+    "song": "Kesariya",
+    "event": "wedding, reception, mehendi",
+    "mood": "romantic, classy",
+    "genre": "Bollywood, Indie",
+    "energy": 5
+  },
+  {
+    "song": "Raataan Lambiyan",
+    "event": "wedding, reception, mehendi",
+    "mood": "romantic",
+    "genre": "Bollywood",
+    "energy": 5
+  },
+  {
+    "song": "Ve Kamleya",
+    "event": "wedding, bidaai",
+    "mood": "emotional, romantic",
+    "genre": "Bollywood",
+    "energy": 4
+  },
+  {
+    "song": "Param Sundari",
+    "event": "sangeet, reception",
+    "mood": "fun, high energy",
+    "genre": "Bollywood",
+    "energy": 8
+  },
+  {
+    "song": "Ghungroo",
+    "event": "sangeet, cocktail",
+    "mood": "high energy, classy",
+    "genre": "Bollywood",
+    "energy": 8
+  },
+  {
+    "song": "Manike Mage Hithe",
+    "event": "sangeet, cocktail",
+    "mood": "fun, high energy",
+    "genre": "Sinhala, Bollywood",
+    "energy": 8
+  },
+  {
+    "song": "Chhod Diya",
+    "event": "bidaai, wedding",
+    "mood": "emotional",
+    "genre": "Bollywood",
+    "energy": 3
+  },
+  {
+    "song": "Teri Baaton Mein Aisa Uljha Jiya",
+    "event": "reception, cocktail",
+    "mood": "romantic, fun",
+    "genre": "Bollywood",
+    "energy": 6
+  },
+  {
+    "song": "Jhoome Jo Pathaan",
+    "event": "baraat, reception, cocktail",
+    "mood": "high energy, hype",
+    "genre": "Bollywood",
+    "energy": 10
+  },
+  {
+    "song": "Besharam Rang",
+    "event": "cocktail, reception, sangeet",
+    "mood": "high energy, classy",
+    "genre": "Bollywood",
+    "energy": 9
+  },
+  {
+    "song": "Zinda Banda",
+    "event": "baraat, sangeet, reception",
+    "mood": "high energy, hype",
+    "genre": "Bollywood",
+    "energy": 10
+  },
+  {
+    "song": "Not Ramaiya Vastavaiya",
+    "event": "sangeet, cocktail",
+    "mood": "high energy, fun",
+    "genre": "Bollywood",
+    "energy": 8
+  },
+
+  {
+    "song": "Tumpa Sona",
+    "event": "sangeet, reception",
+    "mood": "fun, high energy",
+    "genre": "Bengali, Bollywood",
+    "energy": 8
+  },
+  {
+    "song": "Chogada",
+    "event": "sangeet, garba, wedding",
+    "mood": "high energy, fun",
+    "genre": "Gujarati, Bollywood",
+    "energy": 9
+  },
+  {
+    "song": "Ek Do Teen",
+    "event": "sangeet, mehendi",
+    "mood": "fun, high energy",
+    "genre": "Bollywood, 90s",
+    "energy": 8
+  },
+  {
+    "song": "Nainowale Ne",
+    "event": "wedding, reception",
+    "mood": "romantic, classy",
+    "genre": "Bollywood",
+    "energy": 5
+  },
+  {
+    "song": "Mann Bharryaa",
+    "event": "bidaai, wedding",
+    "mood": "emotional",
+    "genre": "Punjabi, Indie",
+    "energy": 3
+  },
+  {
+    "song": "Lut Gaye",
+    "event": "reception, wedding",
+    "mood": "romantic",
+    "genre": "Bollywood",
+    "energy": 5
+  },
+  {
+    "song": "Ranjha",
+    "event": "wedding, reception",
+    "mood": "romantic",
+    "genre": "Bollywood",
+    "energy": 5
+  },
+  {
+    "song": "Satranga",
+    "event": "wedding, reception",
+    "mood": "romantic, classy",
+    "genre": "Bollywood, Indie",
+    "energy": 5
+  },
+  {
+    "song": "Tainu Khaana Khaana",
+    "event": "mehendi, sangeet",
+    "mood": "fun, romantic",
+    "genre": "Punjabi",
+    "energy": 6
+  },
+  {
+    "song": "Le Gayi Le Gayi",
+    "event": "sangeet, baraat",
+    "mood": "high energy, fun",
+    "genre": "Bollywood, 90s",
+    "energy": 9
+  },
+  {
+    "song": "Ole Ole",
+    "event": "baraat, sangeet",
+    "mood": "high energy, fun",
+    "genre": "Bollywood, 90s",
+    "energy": 8
+  },
+  {
+    "song": "Tu Cheez Badi Hai Mast Mast",
+    "event": "sangeet, cocktail",
+    "mood": "high energy, fun",
+    "genre": "Bollywood, 90s",
+    "energy": 8
+  },
+  {
+    "song": "Humma Humma",
+    "event": "sangeet, cocktail",
+    "mood": "high energy, classy",
+    "genre": "Bollywood, 90s",
+    "energy": 8
+  },
+  {
+    "song": "Kaho Na Kaho",
+    "event": "wedding, reception",
+    "mood": "romantic, classy",
+    "genre": "Bollywood",
+    "energy": 4
+  },
+  {
+    "song": "Suraj Hua Maddham",
+    "event": "wedding, reception",
+    "mood": "romantic",
+    "genre": "Bollywood",
+    "energy": 4
+  },
+  {
+    "song": "Laal Ghaghra",
+    "event": "sangeet, mehendi",
+    "mood": "fun, high energy",
+    "genre": "Bollywood, Rajasthani",
+    "energy": 8
+  },
+  {
+    "song": "Bijlee Bijlee",
+    "event": "baraat, sangeet, reception",
+    "mood": "high energy, hype",
+    "genre": "Punjabi",
+    "energy": 10
+  },
+  {
+    "song": "Kaala Chashma (Remix)",
+    "event": "baraat, reception",
+    "mood": "high energy, hype",
+    "genre": "Bollywood, Punjabi, EDM",
+    "energy": 10
+  },
+  {
+    "song": "Nadiyon Paar",
+    "event": "wedding, mehendi",
+    "mood": "romantic, fun",
+    "genre": "Bollywood",
+    "energy": 6
+  },
+  {
+    "song": "Pasoori",
+    "event": "cocktail, reception, wedding",
+    "mood": "classy, romantic",
+    "genre": "Punjabi, Pakistani, Indie",
+    "energy": 6
+  },
+  {
+    "song": "Heeriye",
+    "event": "wedding, reception",
+    "mood": "romantic, classy",
+    "genre": "Bollywood, Indie",
+    "energy": 5
+  },
+  {
+    "song": "Ishq Wala Love",
+    "event": "wedding, reception",
+    "mood": "romantic",
+    "genre": "Bollywood",
+    "energy": 4
+  },
+  {
+    "song": "Tujhe Kitna Chahne Lage",
+    "event": "wedding, bidaai",
+    "mood": "emotional, romantic",
+    "genre": "Bollywood",
+    "energy": 3
+  },
+  {
+    "song": "Subhanallah",
+    "event": "wedding, reception",
+    "mood": "romantic, classy",
+    "genre": "Bollywood",
+    "energy": 5
+  },
+  {
+    "song": "Satakli",
+    "event": "sangeet, reception",
+    "mood": "high energy, fun",
+    "genre": "Bollywood",
+    "energy": 8
+  },
+  {
+    "song": "Tattad Tattad",
+    "event": "baraat, sangeet",
+    "mood": "high energy, hype",
+    "genre": "Bollywood, Rajasthani",
+    "energy": 9
+  },
+  {
+    "song": "Aankh Marey",
+    "event": "sangeet, cocktail",
+    "mood": "fun, high energy",
+    "genre": "Bollywood",
+    "energy": 8
+  },
+  {
+    "song": "Makhna",
+    "event": "sangeet, reception",
+    "mood": "fun, high energy",
+    "genre": "Bollywood, Punjabi",
+    "energy": 8
+  },
+  {
+    "song": "Tere Naina",
+    "event": "wedding, reception",
+    "mood": "romantic, classy",
+    "genre": "Bollywood",
+    "energy": 4
+  },
+  {
+    "song": "Shubh Aarambh",
+    "event": "wedding, baraat",
+    "mood": "high energy, traditional",
+    "genre": "Bollywood",
+    "energy": 8
+  },
+  {
+    "song": "Dheere Dheere Se",
+    "event": "wedding, reception",
+    "mood": "romantic",
+    "genre": "Bollywood, 90s",
+    "energy": 5
+  },
+  {
+    "song": "Aisa Deewana",
+    "event": "mehendi, sangeet",
+    "mood": "fun, romantic",
+    "genre": "Bollywood",
+    "energy": 6
+  }
+]
