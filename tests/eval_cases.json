@@ -1,0 +1,92 @@
+[
+  {
+    "name": "Haldi family fun",
+    "input": "haldi, fun, family",
+    "top_n": 10,
+    "expected_any": [
+      "Punjabi Wedding Song",
+      "The Punjaabban Song",
+      "Gal Mitthi Mitthi Bol",
+      "Banno",
+      "Navrai Majhi"
+    ]
+  },
+  {
+    "name": "Gujarati traditional Haldi",
+    "input": "haldi, traditional, gujarati, family",
+    "top_n": 5,
+    "expected_any": [
+      "Dholi Taro Dhol Baaje",
+      "Mor Bani Thanghat Kare",
+      "Udi Udi Jaye"
+    ]
+  },
+  {
+    "name": "Punjabi Baraat hype",
+    "input": "baraat, hype, punjabi, gen-z",
+    "top_n": 10,
+    "expected_any": [
+      "Mundian To Bach Ke",
+      "Shera Di Kaum",
+      "Mauja Hi Mauja",
+      "Oh Ho Ho Ho",
+      "Ho Jayegi Balle Balle",
+      "Tunak Tunak Tun",
+      "Bijlee Bijlee",
+      "Kaala Chashma (Remix)",
+      "Jhoom Barabar Jhoom",
+      "Sadi Gali"
+    ]
+  },
+  {
+    "name": "Bidaai emotional",
+    "input": "bidaai, emotional, family",
+    "top_n": 10,
+    "expected_any": [
+      "Dilbaro",
+      "Laadki",
+      "Din Shagna Da",
+      "Babul Ki Duayen Leti Ja",
+      "Teri Laadli Main",
+      "Babul",
+      "Vidaai Song – Aaj Meri Vidaai Hai",
+      "Madhaniya"
+    ]
+  },
+  {
+    "name": "Cocktail classy",
+    "input": "cocktail, classy, gen-z",
+    "top_n": 10,
+    "expected_any": [
+      "Besharam Rang",
+      "Ghungroo",
+      "Humma Humma",
+      "Lamberghini",
+      "Raat Ka Nasha"
+    ]
+  },
+  {
+    "name": "Reception romantic",
+    "input": "reception, romantic, family",
+    "top_n": 10,
+    "expected_any": [
+      "Tum Hi Ho",
+      "Tera Hone Laga Hoon",
+      "Kesariya",
+      "Raataan Lambiyan",
+      "Heeriye"
+    ]
+  },
+  {
+    "name": "Sangeet high energy",
+    "input": "sangeet, high energy, bollywood, mixed",
+    "top_n": 10,
+    "expected_any": [
+      "Kala Chashma",
+      "Gallan Goodiyaan",
+      "Kar Gayi Chull",
+      "London Thumakda",
+      "Nagada Sang Dhol"
+    ]
+  }
+]

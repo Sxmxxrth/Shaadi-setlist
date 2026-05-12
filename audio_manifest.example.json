@@ -1,0 +1,39 @@
+{
+  "songs": {
+    "Tareefan": {
+      "audio_file": "audio/Tareefan.mp3",
+      "bpm": 100,
+      "key": "unknown",
+      "hook_start": "0:45",
+      "hook_end": "1:15"
+    },
+    "Badri Ki Dulhania": {
+      "audio_file": "audio/Badri Ki Dulhania.mp3",
+      "bpm": 124,
+      "key": "unknown",
+      "hook_start": "0:52",
+      "hook_end": "1:22"
+    },
+    "Mundian To Bach Ke": {
+      "audio_file": "audio/Mundian To Bach Ke.mp3",
+      "bpm": 98,
+      "key": "unknown",
+      "hook_start": "0:32",
+      "hook_end": "1:02"
+    },
+    "Shera Di Kaum": {
+      "audio_file": "audio/Shera Di Kaum.mp3",
+      "bpm": 96,
+      "key": "unknown",
+      "hook_start": "0:40",
+      "hook_end": "1:10"
+    },
+    "Mauja Hi Mauja": {
+      "audio_file": "audio/Mauja Hi Mauja.mp3",
+      "bpm": 126,
+      "key": "unknown",
+      "hook_start": "0:50",
+      "hook_end": "1:20"
+    }
+  }
+}
