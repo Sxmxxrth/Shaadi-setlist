@@ -44,6 +44,35 @@ For real mashup generation later, add:
 - `compatible_with`: Song titles or style tags this mixes well with
 - `audio_file`: Local path to the licensed/private audio file, if available
 
+## RAG Fields
+
+The local RAG index reads these fields when searching the dataset:
+
+- `song`
+- `event`
+- `mood`
+- `genre`
+- `region`
+- `language`
+- `crowd`
+- `moment`
+- `notes`
+
+Good metadata makes retrieval better. Prefer clear, searchable words like
+`groom squad`, `bride entry`, `family dance`, `peak procession`, or
+`classy cocktail` in `moment` and `notes`.
+
+## Fine-tuning Later
+
+Do not fine-tune on `dataset.json` alone. For useful fine-tuning, first collect
+examples that include:
+
+- user request
+- retrieved songs
+- ideal final playlist
+- reasoning and transition tips
+- whether the result was accepted or edited
+
 ## Tag Rules
 
 Use consistent lowercase tags where possible:

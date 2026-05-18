@@ -1,3 +1,16 @@
+"""
+audio_mashup — Build an ffmpeg command for a hook-based audio mashup.
+
+Takes a mashup plan (from ``mashup_planner``) and a local audio manifest,
+resolves hook timings, and generates or executes the ffmpeg filter-complex
+command that concatenates the hooks into a single MP3.
+
+CLI usage::
+
+    python -m src.audio_mashup "baraat, hype, punjabi, gen-z" --length 5
+    python -m src.audio_mashup "baraat, hype, punjabi, gen-z" --length 5 --execute
+"""
+
 import argparse
 import json
 import shlex
@@ -5,16 +18,23 @@ import shutil
 import subprocess
 from pathlib import Path
 
-import mashup_planner
+from src import mashup_planner
+from src.config import PROJECT_ROOT
 
-
-BASE_DIR = Path(__file__).resolve().parent
-DEFAULT_MANIFEST = BASE_DIR / "audio_manifest.local.json"
-DEFAULT_OUTPUT = BASE_DIR / "output" / "mashup.mp3"
+DEFAULT_MANIFEST = PROJECT_ROOT / "data" / "audio_manifest.local.json"
+DEFAULT_OUTPUT = PROJECT_ROOT / "output" / "mashup.mp3"
 REQUIRED_FIELDS = ("audio_file", "hook_start", "hook_end")
 
 
+# ── Time parsing ──────────────────────────────────────────────────────────────
+
 def parse_time(value: str | int | float) -> float:
+    """
+    Convert a time value to seconds.
+
+    Accepts plain numbers (``42``, ``"42.5"``) or colon-separated formats
+    (``"1:23"`` → 83 s, ``"0:01:23"`` → 83 s).
+    """
     if isinstance(value, (int, float)):
         return float(value)
 
@@ -32,7 +52,10 @@ def parse_time(value: str | int | float) -> float:
     raise ValueError(f"Unsupported time format: {value}")
 
 
+# ── Manifest ──────────────────────────────────────────────────────────────────
+
 def load_manifest(path: Path) -> dict:
+    """Load the audio manifest JSON and return a title → metadata mapping."""
     with open(path) as f:
         data = json.load(f)
     songs = data.get("songs", data)
@@ -40,6 +63,7 @@ def load_manifest(path: Path) -> dict:
 
 
 def resolve_song_metadata(song: dict, manifest: dict) -> tuple[dict | None, list[str]]:
+    """Look up a song in the manifest and validate required fields."""
     title = song["song"]
     metadata = manifest.get(title.strip().lower())
     if not metadata:
@@ -60,7 +84,7 @@ def resolve_song_metadata(song: dict, manifest: dict) -> tuple[dict | None, list
 
     return {
         "title": title,
-        "audio_file": str((BASE_DIR / metadata["audio_file"]).resolve()),
+        "audio_file": str((PROJECT_ROOT / metadata["audio_file"]).resolve()),
         "start": start,
         "end": end,
         "duration": end - start,
@@ -69,9 +93,12 @@ def resolve_song_metadata(song: dict, manifest: dict) -> tuple[dict | None, list
     }, []
 
 
+# ── Clip building ─────────────────────────────────────────────────────────────
+
 def build_clip_specs(plan: dict, manifest: dict) -> tuple[list[dict], list[str]]:
-    clips = []
-    errors = []
+    """Resolve every song in *plan* against *manifest*, collecting clips and errors."""
+    clips: list[dict] = []
+    errors: list[str] = []
 
     for song in plan["songs"]:
         clip, clip_errors = resolve_song_metadata(song, manifest)
@@ -83,6 +110,7 @@ def build_clip_specs(plan: dict, manifest: dict) -> tuple[list[dict], list[str]]
 
 
 def build_ffmpeg_command(clips: list[dict], output: Path) -> list[str]:
+    """Build an ffmpeg command that trims, fades, and concatenates *clips*."""
     if not clips:
         raise ValueError("No clips available to build")
 
@@ -91,8 +119,8 @@ def build_ffmpeg_command(clips: list[dict], output: Path) -> list[str]:
     for clip in clips:
         command.extend(["-i", clip["audio_file"]])
 
-    filters = []
-    labels = []
+    filters: list[str] = []
+    labels: list[str] = []
     for index, clip in enumerate(clips):
         fade_out_start = max(clip["duration"] - 0.6, 0)
         label = f"a{index}"
@@ -111,11 +139,15 @@ def build_ffmpeg_command(clips: list[dict], output: Path) -> list[str]:
     return command
 
 
+# ── Display ───────────────────────────────────────────────────────────────────
+
 def format_command(command: list[str]) -> str:
+    """Shell-quote an ffmpeg command for copy-paste."""
     return " ".join(shlex.quote(part) for part in command)
 
 
 def print_clip_summary(clips: list[dict]) -> None:
+    """Print a numbered summary of the clips that will be concatenated."""
     print("Audio Clips:")
     for index, clip in enumerate(clips, start=1):
         bpm = f", bpm {clip['bpm']}" if clip.get("bpm") else ""
@@ -126,7 +158,10 @@ def print_clip_summary(clips: list[dict]) -> None:
         )
 
 
+# ── CLI ───────────────────────────────────────────────────────────────────────
+
 def main() -> int:
+    """CLI entry point for building/running an audio mashup."""
     parser = argparse.ArgumentParser(description="Build an ffmpeg command for a hook-based mashup.")
     parser.add_argument("request", help="Example: 'baraat, hype, punjabi, gen-z'")
     parser.add_argument("--length", type=int, default=mashup_planner.DEFAULT_LENGTH)

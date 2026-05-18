@@ -1,28 +1,46 @@
+"""
+mashup_planner — Create a DJ-ready song order and transition plan.
+
+Given a user query, this module retrieves matching songs, orders them into
+an energy-aware flow, and generates transition recommendations between
+consecutive tracks.
+
+CLI usage::
+
+    python -m src.mashup_planner "baraat, hype, punjabi, gen-z"
+    python -m src.mashup_planner "haldi, fun, family" --length 6
+"""
+
 import argparse
 
-import app
-
+from src.aliases import MOOD_ALIASES, normalize, split_tags
+from src.models import Song
+from src.retrieval import filter_songs, parse_request
 
 DEFAULT_LENGTH = 8
 
 
-def get_energy(song: app.Song) -> int:
+# ── Helpers ───────────────────────────────────────────────────────────────────
+
+def get_energy(song: Song) -> int:
+    """Return a song's energy level as an integer (default 5)."""
     return int(song.get("energy", 5))
 
 
-def get_tags(song: app.Song, field: str) -> set[str]:
-    return set(app.split_tags(song.get(field, "")))
+def get_tags(song: Song, field: str) -> set[str]:
+    """Return the set of tags for a given metadata field."""
+    return set(split_tags(song.get(field, "")))
 
 
-def get_region_tags(song: app.Song) -> set[str]:
-    return (
-        get_tags(song, "region")
-        | get_tags(song, "language")
-        | get_tags(song, "genre")
-    )
+def get_region_tags(song: Song) -> set[str]:
+    """Combine region, language, and genre tags into one set."""
+    return get_tags(song, "region") | get_tags(song, "language") | get_tags(song, "genre")
 
 
-def transition_style(current: app.Song, next_song: app.Song) -> str:
+# ── Transitions ───────────────────────────────────────────────────────────────
+
+def transition_style(current: Song, next_song: Song) -> str:
+    """Suggest a DJ transition technique between two consecutive songs."""
     energy_a = get_energy(current)
     energy_b = get_energy(next_song)
     shared_region = get_region_tags(current) & get_region_tags(next_song)
@@ -41,19 +59,31 @@ def transition_style(current: app.Song, next_song: app.Song) -> str:
     return "Use a clean 4-count cut and let the next song reset the vibe."
 
 
-def transition_reason(current: app.Song, next_song: app.Song) -> str:
+def transition_reason(current: Song, next_song: Song) -> str:
+    """Explain *why* two songs sit next to each other in the plan."""
     energy_a = get_energy(current)
     energy_b = get_energy(next_song)
-    shared = sorted((get_region_tags(current) & get_region_tags(next_song)) | (get_tags(current, "mood") & get_tags(next_song, "mood")))
+    shared = sorted(
+        (get_region_tags(current) & get_region_tags(next_song))
+        | (get_tags(current, "mood") & get_tags(next_song, "mood"))
+    )
 
     if shared:
         return f"Shared tags: {', '.join(shared[:3])}; energy {energy_a} -> {energy_b}."
     return f"Energy moves {energy_a} -> {energy_b}, giving the set a clear shift."
 
 
-def order_for_mashup(songs: list[app.Song], mood: str, length: int = DEFAULT_LENGTH) -> list[app.Song]:
+# ── Ordering ──────────────────────────────────────────────────────────────────
+
+def order_for_mashup(songs: list[Song], mood: str, length: int = DEFAULT_LENGTH) -> list[Song]:
+    """
+    Sort *songs* into a DJ-friendly order based on the requested *mood*.
+
+    Soft moods get a gentle ascending sort.  High-energy moods get a
+    warmup → middle → peak arc.
+    """
     selected = songs[:length]
-    mood_norm = app.normalize(mood, app.MOOD_ALIASES)
+    mood_norm = normalize(mood, MOOD_ALIASES)
 
     if mood_norm in {"emotional", "romantic", "classy"}:
         return sorted(selected, key=lambda song: (get_energy(song), song.get("song", "")))
@@ -71,9 +101,12 @@ def order_for_mashup(songs: list[app.Song], mood: str, length: int = DEFAULT_LEN
     return warmup + middle + peak
 
 
+# ── Plan building ─────────────────────────────────────────────────────────────
+
 def build_mashup_plan(user_input: str, length: int = DEFAULT_LENGTH) -> dict:
-    request = app.parse_request(user_input)
-    matched = app.filter_songs(
+    """Build a complete mashup plan from a user query string."""
+    request = parse_request(user_input)
+    matched = filter_songs(
         request["event"],
         request["mood"],
         region=request["region"],
@@ -85,14 +118,12 @@ def build_mashup_plan(user_input: str, length: int = DEFAULT_LENGTH) -> dict:
     for index in range(len(ordered) - 1):
         current = ordered[index]
         next_song = ordered[index + 1]
-        transitions.append(
-            {
-                "from": current["song"],
-                "to": next_song["song"],
-                "style": transition_style(current, next_song),
-                "reason": transition_reason(current, next_song),
-            }
-        )
+        transitions.append({
+            "from": current["song"],
+            "to": next_song["song"],
+            "style": transition_style(current, next_song),
+            "reason": transition_reason(current, next_song),
+        })
 
     return {
         "request": request,
@@ -101,7 +132,10 @@ def build_mashup_plan(user_input: str, length: int = DEFAULT_LENGTH) -> dict:
     }
 
 
+# ── Formatting ────────────────────────────────────────────────────────────────
+
 def format_plan(plan: dict) -> str:
+    """Render a mashup plan as a human-readable string."""
     request = plan["request"]
     songs = plan["songs"]
     transitions = plan["transitions"]
@@ -135,7 +169,10 @@ def format_plan(plan: dict) -> str:
     return "\n".join(lines)
 
 
+# ── CLI ───────────────────────────────────────────────────────────────────────
+
 def main() -> int:
+    """CLI entry point for standalone mashup planning."""
     parser = argparse.ArgumentParser(description="Create a DJ-ready mashup playlist plan.")
     parser.add_argument("request", help="Example: 'baraat, hype, punjabi, gen-z'")
     parser.add_argument("--length", type=int, default=DEFAULT_LENGTH, help="Number of songs to include")

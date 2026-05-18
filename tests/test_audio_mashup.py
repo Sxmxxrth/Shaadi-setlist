@@ -1,8 +1,11 @@
-import audio_mashup
-import mashup_planner
+"""Tests for the audio mashup ffmpeg command builder."""
+
+from src import audio_mashup, mashup_planner
+from src.config import PROJECT_ROOT
+
 
 def test_audio_mashup():
-    manifest = audio_mashup.load_manifest(audio_mashup.BASE_DIR / "audio_manifest.example.json")
+    manifest = audio_mashup.load_manifest(PROJECT_ROOT / "data" / "audio_manifest.example.json")
     plan = mashup_planner.build_mashup_plan("baraat, hype, punjabi, gen-z", length=5)
     clips, errors = audio_mashup.build_clip_specs(plan, manifest)
 

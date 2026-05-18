@@ -1,8 +1,18 @@
+# Environment
 .env
+
+# Python
 __pycache__/
 *.pyc
+*.pyo
+*.egg-info/
 venv/
+
+# Pytest
+.pytest_cache/
+
+# Audio & output (local-only)
 audio/
 output/
-audio_manifest.local.json
 downloads/
+audio_manifest.local.json

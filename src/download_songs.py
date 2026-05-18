@@ -21,7 +21,7 @@ from pathlib import Path
 
 # ── Config ────────────────────────────────────────────────────────────────────
 
-OUTPUT_DIR = Path(__file__).resolve().parent / "downloads"
+OUTPUT_DIR = Path(__file__).resolve().parent.parent / "downloads"
 AUDIO_QUALITY = "192"                   # kbps  (128 / 192 / 320)
 SEARCH_SUFFIX = "song official audio"   # appended to each search query
 

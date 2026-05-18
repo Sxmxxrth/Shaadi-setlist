@@ -1,2 +1,4 @@
 python-dotenv
-pytestyt-dlp
+pytest
+yt-dlp
+gradio
